@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocorral <jocorral@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocorral <jocorral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:54:56 by jocorral          #+#    #+#             */
-/*   Updated: 2026/09/09 16:17:08 by jocorral         ###   ########.fr       */
+/*   Updated: 2026/09/21 16:44:08 by jocorral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 int	main(void)
 {
-	char	dst[20];
+char	dst[20];
 
-	ft_memcpy(dst, "hola mundo", 11);
-	printf("%s\n", dst);
-	return (0);
+ft_memcpy(dst, "hola mundo", 11);
+printf("%s\n", dst);
+return (0);
 }
 */

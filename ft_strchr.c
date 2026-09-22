@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocorral <jocorral@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocorral <jocorral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:54:56 by jocorral          #+#    #+#             */
-/*   Updated: 2026/09/08 17:45:12 by jocorral         ###   ########.fr       */
+/*   Updated: 2026/09/21 17:50:08 by jocorral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,19 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
+	while (*s != (char) c)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i++;
+		if (*s == '\0')
+			return (NULL);
+		s++;
 	}
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
-	return (NULL);
+	return ((char *) s);
 }
 
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
-	printf("%s\n", ft_strchr("hola mundo", 'm'));
-	return (0);
-}
-*/
+printf("%s\n", ft_strchr("hola mundo", 'm'));
+return (0);
+}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocorral <jocorral@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocorral <jocorral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:54:56 by jocorral          #+#    #+#             */
-/*   Updated: 2026/09/08 13:22:39 by jocorral         ###   ########.fr       */
+/*   Updated: 2026/09/22 14:09:59 by jocorral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	signo;
-	int	ret;
+	int		i;
+	int		signo;
+	long	ret;
 
 	i = 0;
 	signo = 1;
@@ -34,7 +34,7 @@ int	ft_atoi(const char *nptr)
 		ret = ret * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (ret * signo);
+	return ((int)(ret * signo));
 }
 
 /*

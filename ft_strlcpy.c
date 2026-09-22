@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocorral <jocorral@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocorral <jocorral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:54:56 by jocorral          #+#    #+#             */
-/*   Updated: 2026/09/08 13:18:29 by jocorral         ###   ########.fr       */
+/*   Updated: 2026/09/22 13:34:36 by jocorral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }
 
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {
-	char	dst[5];
+char	dst[15];
+char	ret[11] = "hola mundo";
 
-	printf("return: %zu\n", ft_strlcpy(dst, "hola mundo", sizeof(dst)));
-	printf("dst: %s\n", dst);
-	return (0);
+printf("return: %zu\n", ft_strlcpy(dst, ret, sizeof(dst)));
+printf("dst: %s\n", dst);
+return (0);
 }
 */

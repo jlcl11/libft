@@ -37,6 +37,8 @@ static int	devolver_pos_final(char const *s1, char const *set)
 {
 	int	i;
 
+	if (s1[0] == '\0')
+		return (-1);
 	i = ft_strlen(s1) - 1;
 	while (i >= 0 && is_in_set(s1[i], set))
 		i--;

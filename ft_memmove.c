@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jocorral <jocorral@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jocorral <jocorral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:54:56 by jocorral          #+#    #+#             */
-/*   Updated: 2026/09/09 16:25:56 by jocorral         ###   ########.fr       */
+/*   Updated: 2026/09/22 13:52:38 by jocorral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static void	ft_memmove_back_to_front(char *dest, const char *source,
-		size_t len)
+	size_t	len)
 {
 	while (len > 0)
 	{
@@ -51,10 +51,9 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 int	main(void)
 {
-	char	buf[] = "hola mundo";
+char	buf[] = "hola mundo";
 
-	ft_memmove(buf + 1, buf, 4);
-	printf("%s\n", buf);
-	return (0);
-}
-*/
+ft_memmove(buf + 1, buf, 4);
+printf("%s\n", buf);
+return (0);
+}*/
