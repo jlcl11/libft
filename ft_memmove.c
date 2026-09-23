@@ -6,14 +6,13 @@
 /*   By: jocorral <jocorral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:54:56 by jocorral          #+#    #+#             */
-/*   Updated: 2026/09/22 13:52:38 by jocorral         ###   ########.fr       */
+/*   Updated: 2026/09/23 12:09:58 by jocorral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_memmove_back_to_front(char *dest, const char *source,
-	size_t	len)
+static void	ft_memmove_back_to_front(char *dest, const char *source, size_t len)
 {
 	while (len > 0)
 	{

@@ -14,14 +14,22 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*puntero;
+	unsigned char	*puntero;
+	size_t			total;
+	size_t			i;
 
 	if (nmemb != 0 && size > (size_t) -1 / nmemb)
 		return (NULL);
-	puntero = malloc(nmemb * size);
+	total = nmemb * size;
+	puntero = malloc(total);
 	if (!puntero)
 		return (NULL);
-	ft_memset(puntero, 0, nmemb * size);
+	i = 0;
+	while (i < total)
+	{
+		puntero[i] = 0;
+		i++;
+	}
 	return (puntero);
 }
 

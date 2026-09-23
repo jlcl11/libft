@@ -12,8 +12,6 @@
 
 #include "libft.h"
 
-/* El 127 es DEL, ASCII pero no printable */
-
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

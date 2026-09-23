@@ -6,7 +6,7 @@
 /*   By: jocorral <jocorral@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/01 17:54:56 by jocorral          #+#    #+#             */
-/*   Updated: 2026/09/21 18:14:01 by jocorral         ###   ########.fr       */
+/*   Updated: 2026/09/23 12:28:27 by jocorral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,18 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*p;
+	const char	*last;
 
-	p = s + ft_strlen(s);
-	while (*p != (char) c)
+	last = NULL;
+	while (*s != '\0')
 	{
-		if (p == s)
-			return (NULL);
-		p--;
+		if (*s == (char) c)
+			last = s;
+		s++;
 	}
-	return ((char *) p);
+	if ((char) c == '\0')
+		return ((char *) s);
+	return ((char *) last);
 }
 
 /*#include <stdio.h>

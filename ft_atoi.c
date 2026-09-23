@@ -29,7 +29,7 @@ int	ft_atoi(const char *nptr)
 			signo = -1;
 		i++;
 	}
-	while (ft_isdigit(nptr[i]))
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		ret = ret * 10 + (nptr[i] - '0');
 		i++;
