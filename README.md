@@ -5,7 +5,7 @@
 ## Descripción
 
 Libft es el primer proyecto en C del cursus de 42. El objetivo es reimplementar con el prefijo `ft_` un conjunto de funciones de la `libc` (memoria, cadenas...), añadir un segundo bloque de funciones adicionales que hacen falta en casi todos los proyectos siguientes (split, join, trim, itoa, escritura a un
-file descriptor...) y, por último listas enlazadas (`t_list`).
+file descriptor...) y, por último, listas enlazadas (`t_list`).
 
 ## Instrucciones
 
@@ -43,7 +43,7 @@ valgrind --leak-check=full ./a.out
 ### Testear con libftTester
 
 Para una batería de tests más completa (todas las funciones obligatorias, con comprobación de leaks vía `valgrind` en Linux) se usa el tester de
-[Tripouille](https://github.com/Tripouille/libftTester), clonado dentro del propio repo en `libftTester/` (carpeta ignorada por git, cada uno la clona en su
+[Tripouille](https://github.com/Tripouille/libftTester), clonado dentro del propio repo en `libftTester/` (no se sube al repo: cada uno la clona en su
 copia local):
 
 ```sh
@@ -57,9 +57,9 @@ Comandos principales (ejecutar desde `libftTester/`):
 
 ```sh
 make m                  # lanza todos los tests obligatorios
-make atoi                # lanza solo el test de una función, ej. ft_atoi
-make docker atoi         # igual, pero dentro de un contenedor Linux (para probar valgrind desde mac)
-make vs atoi              # abre en VSCode el .cpp del test de esa función
+make atoi               # lanza solo el test de una función, ej. ft_atoi
+make docker atoi        # igual, pero dentro de un contenedor Linux (para probar valgrind desde mac)
+make vs atoi            # abre en VSCode el .cpp del test de esa función
 ```
 
 
@@ -97,7 +97,7 @@ resultado sale mal). `ft_split` cuenta primero cuántas palabras hay (bloques se
 extremos) para reservar el array de punteros con el tamaño exacto. `ft_putnbr_fd` no usa `ft_itoa` (eso habría metido un `malloc` donde el enunciado solo
 autoriza `write`): escribe dígito a dígito de forma recursiva, acumulando en `long` para poder negar `INT_MIN` sin desbordar.
 
-### Part 3 — Listas enlazadas (`t_list`)
+### Parte 3 — Listas enlazadas (`t_list`)
 
 `ft_lstnew`, `ft_lstadd_front`, `ft_lstsize`, `ft_lstlast`, `ft_lstadd_back`, `ft_lstdelone`, `ft_lstclear`, `ft_lstiter`, `ft_lstmap`.
 
